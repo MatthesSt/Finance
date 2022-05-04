@@ -1,5 +1,5 @@
 <template>
-  <router-view />
+  <router-view id="app" />
 </template>
 
 <style lang="scss">
@@ -9,5 +9,9 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+#app {
+  background-color: green;
+  height: 100vh;
 }
 </style>
