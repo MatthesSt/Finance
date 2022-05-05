@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: "/",
+  publicPath: "/Finance", //enter the name of the git repo here
   outputDir: "./docs",
   //pwa: {
   //workboxPluginMode: "InjectManifest",
@@ -7,4 +7,7 @@ module.exports = {
   //swSrc: "src/service-worker.js",
   //},
   //},
+  css: {
+    extract: false,
+  },
 };

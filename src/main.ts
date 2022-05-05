@@ -3,6 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
+import "./registerServiceWorker";
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
