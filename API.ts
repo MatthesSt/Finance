@@ -21,6 +21,7 @@ export interface User {
   id: string;
 }
 export interface Expense {
+  date: Date;
   use: string;
   cost: number;
   user: string;
@@ -66,12 +67,13 @@ export async function getUsername(): Promise<string> {
   return users.filter(user => user.id == id)[0]?.name;
 }
 
-export async function addExpense(use: string, cost: number): Promise<void> {
+export async function addExpense(use: string, cost: number, date: string): Promise<void> {
   const id = currentUser.value?.uid;
   await addDoc(collection(getFirestore(), "expenses"), {
     user: id,
     use,
     cost,
+    date,
   });
 }
 export async function getExpenses(): Promise<any> {

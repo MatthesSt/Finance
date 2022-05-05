@@ -34,7 +34,8 @@ export default defineComponent({
   methods: {
     async addExpense() {
       try {
-        await API.addExpense(this.use, this.cost);
+        let date = new Date().toLocaleDateString();
+        await API.addExpense(this.use, this.cost, date);
       } catch (e) {
         this.error = "Ausgabe konnte nicht hinzugefügt werden";
       }
